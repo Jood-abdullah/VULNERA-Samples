@@ -1,0 +1,1 @@
+public Optional<URL> getResource(String path) { Path filePath = getFilePath(normalize(path)); if (Files.exists(filePath) && Files.isReadable(filePath) && !Files.isDirectory(filePath)) { try { URL url = filePath.toUri().toURL(); return Optional.of(url); } catch (MalformedURLException e) { } } return Optional.empty(); }
