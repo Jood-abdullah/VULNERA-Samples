@@ -1,0 +1,1 @@
+public SAXParser newSAXParser() { final SAXParser ret; try { ret = new XercesJAXPSAXParser(this, features, validating, handleXInclude); } catch (final SAXException se) { throw new OXFException(se); } return ret; }
