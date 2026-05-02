@@ -1,0 +1,1 @@
+public Optional<InputStream> getResourceAsStream(String path) { Path filePath = getFilePath(normalize(path)); try { return Optional.of(Files.newInputStream(filePath)); } catch (IOException e) { return Optional.empty(); } }
